@@ -56,7 +56,7 @@ export default function Hero() {
 </div>
 
     </div>
-      <div className='py-20 space-x-5 md:space-x-10 px-20 flex justify-center h-1/5'>
+      <div className='py-20 space-x-2 md:space-x-10 flex justify-center h-1/5'>
   <div className='text-center  shadow-sm shadow-[#27082A]  hover:scale-110 cursor-pointer transition ease-in-out duration-150 rounded-xl p-5'>
     {/* <img src={teamwork} alt="" width={150} /> */}
     <p className='text-sm font-medium'>Training  </p>
