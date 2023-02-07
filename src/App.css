@@ -1,0 +1,164 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.cdnfonts.com/css/hero-new');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,400;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* body{
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+} */
+.swiper {
+    width: 240px;
+    height: 320px;
+  }
+
+  @media (max-width: 767px) {
+    .swiper {
+      width: 400px;
+      height: 200px;
+    }
+  }
+  .swipper2{
+    width: 100%;
+    height: 100%;
+  }
+.brandswiper{
+  height: 100%;
+  width:50%;
+   
+}
+  .swiper2 {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide2 {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .logo {
+    animation: rotation 2s infinite linear;
+  }
+  
+  @keyframes rotation {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+  }
+  .swiper-slide2 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #27082A;
+    
+  }
+  
+  .swiper-slide:nth-child(1n) {
+    background-color: rgb(211, 122, 7)
+    /* background-color: #27082A; */
+    
+  
+    /* background-color: rgb(206, 17, 17); */
+  }
+  
+  .swiper-slide:nth-child(2n) {
+    background-color: #27082A;
+    color:white
+    /* background-color: rgb(0, 140, 255); */
+  }
+  
+  .swiper-slide:nth-child(3n) {
+    background-color: rgb(211, 122, 7)
+    /* background-color: rgb(10, 184, 111); */
+  }
+  
+  .swiper-slide:nth-child(4n) {
+    background-color: #27082A;
+    /* background-color: rgb(211, 122, 7); */
+  }
+  
+  .swiper-slide:nth-child(5n) {
+    background-color: rgb(118, 163, 12);
+  }
+  
+  .swiper-slide:nth-child(6n) {
+    background-color: rgb(180, 10, 47);
+  }
+  
+  .swiper-slide:nth-child(7n) {
+    background-color: rgb(35, 99, 19);
+  }
+  
+  .swiper-slide:nth-child(8n) {
+    background-color: rgb(0, 68, 255);
+  }
+  
+  .swiper-slide:nth-child(9n) {
+    background-color: rgb(218, 12, 218);
+  }
+  
+  .swiper-slide:nth-child(10n) {
+    background-color: rgb(54, 94, 77);
+  }
+  .custom-shape-divider-bottom-1675409371 {
+    
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 10;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-16754093712 {
+    position:absolute;
+   top:0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 10;
+  
+}
+
+.custom-shape-divider-bottom-1675409371 svg {
+    position: relative;
+    display: block;
+    width: calc(300% + 1.3px);
+    height: 288px;
+}
+
+.custom-shape-divider-bottom-16754093712 .shape-fill {
+    fill: #EAB308;
+}
+.custom-shape-divider-bottom-1675409371 .shape-fill {
+  fill: #EAB308;
+}
