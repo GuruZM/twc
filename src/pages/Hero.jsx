@@ -55,12 +55,12 @@ export default function Hero() {
  </h2>
   
 
- <div className='flex  flex-col w-full pr-5  pb-10 md:pb-0 -skew-x-3 justify-center'>
+ <div className='flex  flex-col w-full   pb-10 md:pb-0 -skew-x-3 justify-center'>
  <Swiper
         effect={"cards"}
         grabCursor={true}
         modules={[EffectCards]}
-        className="mySwiper"
+        className="swiper3"
       >
         <SwiperSlide className='flex flex-col  '> 
           <img src={training} className="hidden md:block" alt="" width={200} />
