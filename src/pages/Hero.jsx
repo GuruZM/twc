@@ -46,7 +46,7 @@ export default function Hero() {
     }}
     className="h-3/4 w-full hero"
     >
-<div className='bg-[#27082A] h-full opacity-80  '>
+<div className='bg-[#27082A] h-full w-full opacity-80  '>
 <div className=' w-4/5    py-28 m-auto h-full flex flex-col md:flex-row justify-around '>
  
 <h2 className='text-white h-full font-bold my-20 mb-20 flex items-center text-5xl md:text-6xl'>
@@ -55,7 +55,7 @@ export default function Hero() {
  </h2>
   
 
- <div className='flex  flex-col w-full overflow-x-hidden  pb-10 md:pb-0 -skew-x-3 justify-center'>
+ <div className='flex  flex-col w-full pr-5  pb-10 md:pb-0 -skew-x-3 justify-center'>
  <Swiper
         effect={"cards"}
         grabCursor={true}
