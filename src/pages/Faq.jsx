@@ -63,13 +63,13 @@ export default function Faq() {
                         toggle(question.id)
                 }
              }
-             className='flex flex-col md:flex-row-reverse -mt-3  items-center space-y-2 p-6 border-l-4 border-r-4 border-yellow-500 rounded-lg justify-between shadow-lg  hover:scale-105 transition ease-in-out duration-300 cursor-pointer my-3'>
+             className='flex flex-col md:flex-row-reverse  my-8  items-center space-y-2 p-6 border-l-4 border-r-4 border-yellow-500 rounded-lg justify-between shadow-lg  hover:scale-105 transition ease-in-out duration-300 cursor-pointer  '>
           <FiArrowDownCircle size={20} color="black"/>
           
           <h3 className=' font-medium'>{question.question}</h3>
          </div>
          {question.on && 
-        <div className='flex flex-col justify-center'>
+        <div className='flex flex-col my-5 justify-center'>
             <CgTranscript className='m-auto' size={30}/>
          <p className='text-center py-5 transtion mb-5 rounded-xl font-medium border-b-2 border-yellow-500 ease-in-out duration-500'>{question.ans}</p>
         </div>
@@ -83,9 +83,9 @@ export default function Faq() {
 
  
 
-    <div>
+    <div className='-mt-2'>
 
-        <div className=' w-full flex relative text-center py-20'>
+        <div className=' w-full  flex relative text-center py-20'>
         <div class="custom-shape-divider-bottom-16754093712">
     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
         <path d="M0,0V6c0,21.6,291,111.46,741,110.26,445.39,3.6,459-88.3,459-110.26V0Z" class="shape-fill"></path>
