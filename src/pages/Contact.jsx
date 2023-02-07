@@ -9,7 +9,7 @@ export default function Contact() {
     backgroundAttachment:"fixed"
     
     }}
-    className='relative -z-10'>
+    className='relative z-10'>
       <div className='absolute bg-[#27082A] opacity-90 h-full w-full'></div>
         <div 
         id="contact"
@@ -55,7 +55,7 @@ export default function Contact() {
         <label for="floating_company" class="peer-focus:font-medium absolute text-sm text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Company (Ex. TWC)</label>
     </div>
   </div>
-  <button type="submit" class="text-white w-full bg-yellow-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-yellow-500 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+  <button type="submit" class="text-white w-full relative z-10 bg-yellow-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-yellow-500 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
 </form>
 </div>   
         </div>

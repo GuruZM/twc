@@ -179,9 +179,9 @@ export default function Navbar() {
 
     <ul className=" md:hidden flex  text-white items-center justify-center space-y-10 flex-col ">
     <li className='link1 text-3xl font-semibold'><a href="/" onClick={toggleMenu}>Home</a> </li>
-    <li className='link1 text-3xl font-semibold'><a href="/about" onClick={toggleMenu}>About</a> </li>
-    <li className='link2 text-3xl font-semibold'><a href="/services" onClick={toggleMenu}>Services</a> </li>
-    <li className='link3  text-3xl font-semibold'> <a href="/services" onClick={toggleMenu}>Contact</a> </li>
+    <li className='link2 text-3xl font-semibold'><a href="/about" onClick={toggleMenu}>About</a> </li>
+    <li className='link3 text-3xl font-semibold'><a href="/services" onClick={toggleMenu}>Services</a> </li>
+    <li className='link4  text-3xl font-semibold'> <a href="/services" onClick={toggleMenu}>Contact</a> </li>
     {/* <li className='link4 text-3xl font-semibold'>CO</li>  */}
 
 </ul>
