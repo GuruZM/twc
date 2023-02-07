@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import {FiArrowDownCircle} from "@react-icons/all-files/fi/FiArrowDownCircle"
 import {CgTranscript} from "@react-icons/all-files/cg/CgTranscript"
-import {BiSupport} from "@react-icons/all-files/bi/bisupport"
+// import {BiSupport} from "@react-icons/all-files/bi/bisupport"
 import { Fade } from "react-awesome-reveal";
 export default function Faq() {
     const questions = [
@@ -103,7 +103,7 @@ export default function Faq() {
                 {answers}
             </div>
             <p className='flex space-x-10 justify-center font-medium'>
-                Feel Free to reach out for if your question is not specified  <BiSupport className='ml-5 text-yellow-500'  size={20}/>
+                {/* Feel Free to reach out for if your question is not specified  <BiSupport className='ml-5 text-yellow-500'  size={20}/> */}
             </p>
             </div>
         </div>
