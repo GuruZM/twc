@@ -18,8 +18,8 @@ export default function Footer() {
     {/* <div className='h-28 bg-white absolute -top-10 left-0 right-0 m-auto  w-4/5 shadow-2xl'>
 
     </div> */}
-        <div className='w-4/5   flex  items-center'>
-      <div className='flex flex-col z-10 pt-10 justify-center items-center w-3/4 h-full'>
+        <div className='w-4/5 px-20  flex  items-center'>
+      <div className='md:flex flex-col hidden  z-10 pt-10 justify-center items-center w-3/4 h-full'>
       <img src={logo} alt="" className='pb-2' width={80} />
      {/* <p className='text-white text-xs'>TSALACHWORTH
 CONSULTANCY</p>  */}

@@ -91,21 +91,21 @@ export default function Hero() {
 </div>
 
     </div>
-      <div className='py-20 space-x-3 md:space-x-10   px-10 flex justify-center h-1/5'>
-  <div className='text-center  shadow-sm shadow-[#27082A]  hover:scale-110 cursor-pointer transition ease-in-out duration-150 rounded-xl p-5'>
+      <div className='py-20 space-x-2 md:space-x-10     flex justify-center h-1/5'>
+  <div className='text-center  shadow-sm shadow-[#27082A]  hover:scale-110 cursor-pointer transition ease-in-out duration-150 rounded-xl p-4 md:p-5'>
     {/* <img src={teamwork} alt="" width={150} /> */}
     <p className='text-sm font-medium'>Teamwork </p>
   </div>
-  <div className='text-center shadow-sm shadow-yellow-500 hover:scale-110 cursor-pointer transition ease-in-out duration-150 rounded-xl p-5'>
+  <div className='text-center shadow-sm shadow-yellow-500 hover:scale-110 cursor-pointer transition ease-in-out duration-150 rounded-xl p-4 md:p-5'>
     {/* <img src={integrity} alt="" width={150} /> */}
     <p  className='text-sm font-medium'>Integrity </p>
   </div>
-  <div className='text-center shadow-sm shadow-[#27082A]  hover:scale-110 cursor-pointer transition ease-in-out duration-150 rounded-xl p-5'>
+  <div className='text-center shadow-sm shadow-[#27082A]  hover:scale-110 cursor-pointer transition ease-in-out duration-150 rounded-xl p-4 md:p-5'>
     {/* <img src={teamwork} alt="" width={150} /> */}
     <p  className='text-sm font-medium'> Mastery </p>
   </div>
 
-  <div className='text-center shadow-sm rounded-xl hover:scale-110 cursor-pointer transition ease-in-out duration-150 shadow-yellow-500 p-5'>
+  <div className='text-center shadow-sm rounded-xl hover:scale-110 cursor-pointer transition ease-in-out duration-150 shadow-yellow-500 p-4 md:p-5'>
     {/* <img src={teamwork} alt="" width={150} /> */}
     <p  className='text-sm font-medium'> Excellence </p>
   </div>

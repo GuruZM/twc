@@ -63,7 +63,7 @@ export default function Faq() {
                         toggle(question.id)
                 }
              }
-             className='flex flex-col md:flex-row-reverse   items-center space-y-2 p-6 border-l-4 border-r-4 border-yellow-500 rounded-lg justify-between shadow-lg  hover:scale-105 transition ease-in-out duration-300 cursor-pointer my-3'>
+             className='flex flex-col md:flex-row-reverse -mt-3  items-center space-y-2 p-6 border-l-4 border-r-4 border-yellow-500 rounded-lg justify-between shadow-lg  hover:scale-105 transition ease-in-out duration-300 cursor-pointer my-3'>
           <FiArrowDownCircle size={20} color="black"/>
           
           <h3 className=' font-medium'>{question.question}</h3>
