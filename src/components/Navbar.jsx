@@ -131,7 +131,7 @@ export default function Navbar() {
             smooth={true}
             offset={-70}
             duration={500}
-            className='link2 text-xs cursor-pointer text-[#27082A] font-semibold'>ABOUT</Link >
+            className='link2 text-xs  s cursor-pointer text-[#27082A] font-semibold'>ABOUT</Link >
             
             
             <a href="/services"
