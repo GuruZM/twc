@@ -3,6 +3,7 @@ import Hero from "./Hero";
 import Glance from "./Glance";
 import WeAre from "./WeAre";
 import Ceo from "./Ceo";
+import Navbar from "../components/Navbar"
 import Clients from "./Clients"
 import Contact from "./Contact"
 import Testimonials from "./Testimonials";
@@ -12,7 +13,8 @@ import Faq from './Faq';
  
 export default function Home() {
   return (
-    <div>
+    <div className='relative'>
+        <Navbar/>
           <Hero />
          <Glance />
          <WeAre/>

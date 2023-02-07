@@ -3,15 +3,16 @@ import training from "../assets/images/training.jpg"
 import train from "../assets/images/train.jpg"
 import media from "../assets/images/media.jpg"
 import business from "../assets/images/business.jpg"
+import { Fade } from "react-awesome-reveal";
 
 export default function ServicesItem() {
   return (
     <div>     
-        <div className='flex   py-5 w-4/5 mx-auto  border-yellow-500'>
+        <div className='flex flex-col md:flex-row   py-5 w-4/5 mx-auto  border-yellow-500'>
 <img src={training} width={600} height={400} className="rounded-lg" alt="" />
  
-<div className='flex flex-col justify-center pb-10  w-full items-center'>
-    <h2 className='text-center -ml-80 p-8 rounded-lg bg-white shadow-lg my-10 text-4xl font-bold py-10'>Training <span className='text-yellow-500'>Services</span>  </h2>
+<div className='flex flex-col  justify-center pb-10  w-full items-center'>
+<Fade delay={100} duration={1000} direction="right">   <h2 className='text-center md:-ml-80 p-8 rounded-lg bg-white shadow-lg my-10 text-4xl font-bold py-10'>Training <span className='text-yellow-500'>Services</span>  </h2></Fade>
     <ul className='text-sm flex max-w-sm space-x-12 space-y-2 flex-wrap text-center'>
         <li className='shadow-2xl p-3  text-sm font-medium rounded-lg border-r-2 border-yellow-500 border-l-2'>Leadership</li>
         <li className='shadow-2xl p-3  text-sm font-medium rounded-lg border-r-2 border-yellow-500 border-l-2'>Team Management</li>
@@ -23,10 +24,10 @@ export default function ServicesItem() {
         </div>
         
 
-        <div className='flex py-5 w-4/5 mx-auto   pt-28 border-yellow-500'>
+        <div className='flex py-5 w-4/5 mx-auto  flex-col-reverse md:flex-row  pt-28 border-yellow-500'>
 
 <div className='flex flex-col justify-center  b w-full items-center'>
-    <h2 className='text-center -mr-80 z-10 p-8 rounded-lg bg-white shadow-lg my-10 text-4xl font-bold py-10'><span className='text-yellow-500'>Coaching</span> Services  </h2>
+<Fade delay={100} duration={1000} direction="left">  <h2 className='text-center md:-mr-80 z-10 p-8 rounded-lg bg-white shadow-lg my-10 text-4xl font-bold py-10'><span className='text-yellow-500'>Coaching</span> Services  </h2></Fade>
     <ul className='text-sm flex max-w-sm space-x-11 space-y-2 flex-wrap text-center'>
         <li className='shadow-lg p-3 font-medium rounded-lg border-r-2 border-yellow-500 border-l-2'>Personal/Career Development</li>
         <li className='shadow-lg p-3 font-medium rounded-lg border-r-2 border-yellow-500 border-l-2'>Mindset Development</li>
@@ -39,10 +40,10 @@ export default function ServicesItem() {
         </div>
 
 
-        <div className='flex py-5 w-4/5 mx-auto  pt-28 py-5  border-yellow-500'>
+        <div className='flex py-5 w-4/5 mx-auto  flex-col md:flex-row  pt-28   border-yellow-500'>
 <img src={media} width={600} className="rounded-lg" alt="" />
 <div className='flex flex-col justify-center  b w-full items-center'>
-    <h2 className='text-center -ml-80 p-8 rounded-lg bg-white shadow-lg my-10 text-4xl font-bold py-10'>Media <span className='text-yellow-500'>Services</span></h2>
+<Fade delay={100} duration={1000} direction="right">   <h2 className='text-center md:-ml-80 p-8 rounded-lg bg-white shadow-lg my-10 text-4xl font-bold py-10'>Media <span className='text-yellow-500'>Services</span></h2></Fade>
     <ul className='text-sm flex max-w-sm space-x-11 space-y-2 flex-wrap text-center '>
         <li className='shadow-lg p-3 font-medium rounded-lg border-r-2 border-yellow-500 border-l-2'>Filming & Video Editing</li>
         <li className='shadow-lg p-3 font-medium rounded-lg border-r-2 border-yellow-500 border-l-2'>Documentary</li>
@@ -51,10 +52,10 @@ export default function ServicesItem() {
     </ul>
 </div>
         </div>
-        <div className='flex w-4/5 pb-28  mx-auto pt-28 border-yellow-500'>
+        <div className='flex w-4/5 pb-28 flex-col-reverse md:flex-row   mx-auto pt-28 border-yellow-500'>
 
 <div className='flex flex-col justify-center  w-full items-center'>
-    <h2 className='text-center -mr-80 z-10 p-8   rounded-lg bg-white shadow-lg my-10 text-4xl font-bold py-10'>Business <span className='text-yellow-500'>Development </span> <br/> Services</h2>
+<Fade delay={100} duration={1000} direction="left">  <h2 className='text-center md:-mr-80 z-10 p-8   rounded-lg bg-white shadow-lg my-10 text-4xl font-bold py-10'>Business <span className='text-yellow-500'>Development </span> <br/> Services</h2></Fade>
     <ul className='text-sm flex max-w-sm space-x-11 space-y-2 flex-wrap text-center'>
         <li className='shadow-lg p-3 font-medium rounded-lg border-r-2 border-yellow-500 border-l-2'>Strategy Planning & Development</li>
         <li className='shadow-lg p-3 font-medium rounded-lg border-r-2 border-yellow-500 border-l-2'>Business Formation & Formalization</li>

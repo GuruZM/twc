@@ -9,7 +9,7 @@ export default function Contact() {
     backgroundAttachment:"fixed"
     
     }}
-    className='relative'>
+    className='relative -z-10'>
       <div className='absolute bg-[#27082A] opacity-90 h-full w-full'></div>
         <div 
         id="contact"

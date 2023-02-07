@@ -3,6 +3,7 @@ import { useState } from 'react'
 import {FiArrowDownCircle} from "@react-icons/all-files/fi/FiArrowDownCircle"
 import {CgTranscript} from "@react-icons/all-files/cg/CgTranscript"
 import {BiSupport} from "@react-icons/all-files/bi/bisupport"
+import { Fade } from "react-awesome-reveal";
 export default function Faq() {
     const questions = [
 {
@@ -53,7 +54,7 @@ export default function Faq() {
     const answers = ques.map(question => (
     //  console.log(question.id),
     //  let id = question.id,
-        <div 
+    <Fade delay={100} duration={question.id+"000"} direction="up">  <div 
         key={question.question}>
            
              <div 
@@ -62,7 +63,7 @@ export default function Faq() {
                         toggle(question.id)
                 }
              }
-             className='flex flex-col md:flex-row-reverse items-center space-y-2 p-6 border-l-4 border-r-4 border-yellow-500 rounded-lg justify-between shadow-lg  hover:scale-105 transition ease-in-out duration-300 cursor-pointer my-3'>
+             className='flex flex-col md:flex-row-reverse   items-center space-y-2 p-6 border-l-4 border-r-4 border-yellow-500 rounded-lg justify-between shadow-lg  hover:scale-105 transition ease-in-out duration-300 cursor-pointer my-3'>
           <FiArrowDownCircle size={20} color="black"/>
           
           <h3 className=' font-medium'>{question.question}</h3>
@@ -75,6 +76,7 @@ export default function Faq() {
         
          }
         </div>
+        </Fade>
       ))
     
   return (
@@ -90,7 +92,7 @@ export default function Faq() {
     </svg>
 </div>
            <div className=' w-4/5 flex  flex-col space-y-10 m-auto'>
-            <div className='m-auto  z-40'>
+            <div className='m-auto  z-10'>
               
                 <h2 className='text-5xl absolute font-Montserrat text-[#27082A] -top-5 left-0 right-0 mx-auto font-bold'>FAQ'<span className='text-white'>s</span> </h2>
                 <p className='text-sm font-medium'>Everything you need to know about Our Services</p>

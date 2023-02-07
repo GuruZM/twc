@@ -10,14 +10,14 @@ import bla from "../assets/logo/bla.png";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper";
-
+import { Fade } from "react-awesome-reveal";
 export default function Clients() {
   return (
     <div className="shadow-md">
       <div className="  max-h-fit py-8 pb-16 pt-8   w-4/5 m-auto">
-        <h2 className="py-20 text-4xl text-[#27082A]  font-Montserrat font-bold">
+      <Fade delay={100} duration={1500} direction="left"> <h2 className="py-20 text-4xl text-[#27082A]  font-Montserrat font-bold">
           PLEASURE TO <span className="text-yellow-500">WORK</span> WITH!
-        </h2>
+        </h2></Fade>
         <div className="h-full w-full">
           <Swiper
             className="swipper2"
@@ -121,13 +121,13 @@ export default function Clients() {
             </SwiperSlide>
           </Swiper>
         </div>
-        <p className="py-16 text-sm font-Montserrat max-w-3xl font-medium">
+        <Fade delay={100} duration={2000} direction="up">    <p className="py-16 text-sm font-Montserrat max-w-3xl font-medium">
           We pride ourselves in quality services delivery, for any type of
           client. We have had the privilege to provide coaching, training and
           business development services to WHO. Our team of experts have worked
           closely with WHO to support their mission of ensuring the highest
           possible level of health for all people. 
-        </p>
+        </p></Fade>
       </div>
     </div>
   );
