@@ -55,7 +55,7 @@ export default function Hero() {
  </h2>
   
 
- <div className='flex  flex-col  pb-10 md:pb-0 -skew-x-3 justify-center'>
+ <div className='flex  flex-col w-full overflow-x-hidden  pb-10 md:pb-0 -skew-x-3 justify-center'>
  <Swiper
         effect={"cards"}
         grabCursor={true}

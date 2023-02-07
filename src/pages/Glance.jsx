@@ -74,7 +74,7 @@ export default function Glance() {
          }}
         className="h-[500px]">
            <div className="h-full text-white flex items-center justify-center  ">
-           <h2 className="text-5xl md:text-6xl"> Empower Growth</h2>
+           <h2 className="text-5xl md:text-3xl"> Empower Growth</h2>
            </div>
            </SwiperSlide>
            <SwiperSlide 
@@ -85,7 +85,7 @@ export default function Glance() {
          }}
         className="h-[500px]">
           <div className="h-full text-white flex items-center justify-center  ">
-          <h2 className="text-5xl md:text-6xl">  Inspire Excellence</h2>
+          <h2 className="text-5xl md:text-3xl">  Inspire Excellence</h2>
            </div>
            </SwiperSlide>
            <SwiperSlide 
@@ -96,7 +96,7 @@ export default function Glance() {
          }}
         className="h-[500px]">
          <div className="h-full flex text-white items-center justify-center  ">
-         <h2 className="text-5xl md:text-6xl"> Maximize Impact</h2>
+         <h2 className="text-5xl md:text-3xl"> Maximize Impact</h2>
            </div>
            </SwiperSlide>
            <SwiperSlide 
@@ -107,7 +107,7 @@ export default function Glance() {
          }}
         className="h-[500px]">
          <div className="h-full flex items-center justify-center  ">
-         <h2 className="text-5xl md:text-6xl"> Nurture Talent </h2>
+         <h2 className="text-5xl md:text-3xl"> Nurture Talent </h2>
            </div>
            </SwiperSlide>
         {/* <SwiperSlide>Slide 2</SwiperSlide>
