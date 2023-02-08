@@ -20,7 +20,7 @@ const FloatingActionButton = () => {
       {toggleSocial ? <div className="bg-white transition ease-in-out duration-1000 flex flex-col justify-center items-center py-2 mb-5 rounded-full shadow-lg">
         <a 
         target="_blank"
-        href="https://api.whatsapp.com/send?phone=0960483243" className="text-gray-700 p-3 transition ease-in-out hover:scale-110">
+        href="https://api.whatsapp.com/send?phone=0777036706" className="text-gray-700 p-3 transition ease-in-out hover:scale-110">
         <SiWhatsapp size={25}/>
           
         </a>

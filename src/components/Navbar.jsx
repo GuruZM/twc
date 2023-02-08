@@ -114,7 +114,7 @@ export default function Navbar() {
    <div className='shadow-lg z-40 fixed  bg-white w-full items-center     border-yellow-500'>
        
        <div className='w-4/5 m-auto justify-between items-center   py-2 flex'>
-        <img src={logo} alt="" className='animate-vertical-spin' width={50} />
+      <a href="/"> <img src={logo} alt="" className='animate-vertical-spin' width={50} /></a> 
         
     <BiMenuAltRight 
     className='md:hidden cursor-pointer'
