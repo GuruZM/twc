@@ -19,6 +19,7 @@ export default function ServicesItem() {
         <li className='shadow-2xl p-3  text-sm font-medium rounded-lg border-r-2 border-yellow-500 border-l-2'>Customer Service</li>
         <li className='shadow-2xl p-3  text-sm font-medium rounded-lg border-r-2 border-yellow-500 border-l-2'>Financial Literacy</li>
         <li className='shadow-2xl p-3  text-sm font-medium rounded-lg border-r-2 border-yellow-500 border-l-2'>Financial Management</li>
+        <li className='shadow-2xl p-3  text-sm font-medium rounded-lg border-r-2 border-yellow-500 border-l-2'>Change Management</li>
     </ul>
 </div>
         </div>

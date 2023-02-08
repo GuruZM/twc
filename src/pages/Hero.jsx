@@ -46,12 +46,12 @@ export default function Hero() {
     }}
     className="h-3/4 w-full hero"
     >
-<div className='bg-[#27082A] h-full w-full opacity-80  '>
+<div className='bg-[#27082A] h-full w-full opacity-80 pt-20 '>
 <div className=' w-4/5    py-28 m-auto h-full flex flex-col md:flex-row justify-around '>
  
-<h2 className='text-white h-full font-bold my-20 mb-20 flex items-center text-5xl md:text-6xl'>
-  <span className='pb-10 border-b-2 rounded-md border-yellow-500'> <span className='header '>A <span className='text-yellow-500'>Hub</span> of <br/> Transformation</span> </span> 
- 
+<h2 className='text-white h-full font-bold my-20 mb-20 flex flex-col items-center md:items-start  text-center md:text-left text-4xl md:text-6xl'>
+  <span className='pb-10  uppercase rounded-md border-yellow-500'> <span className='header '>A <span className='text-yellow-500'>Hub</span> of <br/> Transformation</span> </span> 
+ <hr className='w-24 border-2  border-yellow-500' />
  </h2>
   
 

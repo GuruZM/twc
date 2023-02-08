@@ -10,6 +10,7 @@ import Testimonials from "./Testimonials";
 import Footer from "./Footer"
 import Brand from "./Brand";
 import Faq from './Faq';
+import FloatingActionButton from './FloatingButton';
  
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
          <Testimonials/>
          <Faq/>
          <Footer/>
+         <FloatingActionButton/>
     </div>
   )
 }

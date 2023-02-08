@@ -18,7 +18,7 @@ export default function Footer() {
     {/* <div className='h-28 bg-white absolute -top-10 left-0 right-0 m-auto  w-4/5 shadow-2xl'>
 
     </div> */}
-        <div className='w-4/5 m-auto pr-20  flex  items-center'>
+        <div className='w-4/5 m-auto   flex   items-center'>
       <div className='md:flex flex-col hidden  z-10 pt-10 justify-center items-center w-3/4 h-full'>
       <img src={logo} alt="" className='pb-2' width={80} />
      {/* <p className='text-white text-xs'>TSALACHWORTH
@@ -38,10 +38,10 @@ CONSULTANCY</p>  */}
       
     </ul>
   </div>
-  <div className='  py-10 pl-20'>
+  <div className=' py-10 md:pl-20'>
     {/* <h2 className='py-10 font-bold  '>Social Media</h2> */}
-    <div className='flex    space-x-5'>
-      <FaFacebookF className='opacity-70   hover:scale-110 cursor-pointer transition ease-in-out duration-150 text-white' size={23}/>
+    <div className='flex flex-col border-2 md:flex-row justify-center items-center space-y-5 space-x-5'>
+      <FaFacebookF className='opacity-70   hover:scale-110 cursor-pointer   transition ease-in-out duration-150 text-white' size={23}/>
       <RiInstagramLine className='text-white z-10  hover:scale-110 cursor-pointer transition ease-in-out duration-150' size={23}/>
        <FaTwitter className='text-white opacity-70  hover:scale-110 cursor-pointer transition ease-in-out duration-150' size={23}/>
     </div>
