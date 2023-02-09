@@ -42,7 +42,8 @@ export default function Hero() {
  
 <div className='text-white pt-10 h-full flex-col font-bold my-20 mb-20 flex items-center text-5xl md:text-6xl'>
   <h1 className='pb-8 uppercase hero-text text-center rounded-md border-yellow-500'> 
-  A <span className='text-yellow-500'>Solution</span> for </h1>  
+  A <span className='text-yellow-500 mb-2'>Solution</span></h1>
+  <h1 className=' hero-text uppercase mb-3 md:mb-10'>for</h1>  
   <h1 className='hero-text uppercase md:-mt-5'>  Every Need </h1> 
   <hr className='w-28 border-2 mt-10 hero-text border-yellow-500' />
  </div>

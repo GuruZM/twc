@@ -223,7 +223,8 @@ export default function Navbar() {
 
               <li className='nav-link text-3xl'>
               <a 
-             href="/#about"
+             target = "_blank"
+             href={pdf}
             className='  font-semibold  px-6 py-3 border-2 border-yellow-500 rounded-full text-white cursor-pointer'>
               Profile
               </a>

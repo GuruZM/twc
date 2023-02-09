@@ -66,7 +66,7 @@ export default function Hero() {
  
 <div className='text-white h-full font-bold my-20 mb-20 flex flex-col items-center md:items-start  text-center md:text-left text-4xl md:text-6xl'>
   <h1 className='  hero-text uppercase rounded-md  border-yellow-500'> A <span className='text-yellow-500'>Hub</span> of </h1><br />
-   <h1 className='hero-text  -mt-12 pb-10 uppercase'>Transformation</h1>   
+   <h1 className='hero-text  md:-mt-12 pb-10 uppercase'>Transformation</h1>   
  <hr className='w-24 border-2  border-yellow-500' />
  </div>
   

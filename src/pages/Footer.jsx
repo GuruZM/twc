@@ -38,12 +38,12 @@ CONSULTANCY</p>  */}
       
     </ul>
   </div>
-  <div className='   flex flex-col    md:flex-row  justify-evenly items-center space-y-5 md:space-y-0 space-x-0 md:space-x-5  '>
+  <div className='   flex flex-col mt-28   md:flex-row  justify-evenly items-center space-y-5 md:space-y-0 space-x-0 md:space-x-5  '>
 
      
-      <span> <FaFacebookF className='opacity-70   hover:scale-110 cursor-pointer   transition ease-in-out duration-150 text-white' size={23}/></span> 
-     <span> <RiInstagramLine className='text-white z-10 opacity-70 hover:scale-110 cursor-pointer transition ease-in-out duration-150' size={23}/></span> 
-      <span> <FaTwitter className='text-white opacity-70  hover:scale-110 cursor-pointer transition ease-in-out duration-150' size={23}/></span> 
+      <span> <FaFacebookF className='opacity-70   hover:scale-110 cursor-pointer   transition ease-in-out duration-150 text-white' size={20}/></span> 
+     <span> <RiInstagramLine className='text-white z-10 opacity-70 hover:scale-110 cursor-pointer transition ease-in-out duration-150' size={20}/></span> 
+      <span> <FaTwitter className='text-white opacity-70  hover:scale-110 cursor-pointer transition ease-in-out duration-150' size={20}/></span> 
    
   </div>
       </div>
