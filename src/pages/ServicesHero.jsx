@@ -15,18 +15,14 @@ import { EffectCards } from "swiper";
 
 export default function Hero() {
 
- useEffect(()=>{
-  let tl4=gsap.timeline();
-  tl4.fromTo(
-    ".header",2,
-    { y: -100, opacity: 0 },
-    { duration: 1, 
-      stagger:1,
-      y: 0, opacity: 1, ease: "power2.inOut" }
-  )
-//  tl4.from(".hero", {duration: 1, width: 0, to: {width: window.innerWidth}});
-
- })
+  useEffect(() => {
+    gsap.fromTo(
+      '.hero-text',
+      1,
+      { opacity: 0, y: 100 },
+      { opacity: 1, y: 0, duration: 3, stagger: 0.2 }
+    );
+    });  
 
   return (
     <div 
@@ -44,12 +40,14 @@ export default function Hero() {
 <div className='bg-[#27082A] h-full opacity-80  '>
 <div className=' w-4/5    py-28  m-auto h-full flex flex-col md:flex-col justify-center items-center '>
  
-<h2 className='text-white pt-10 h-full font-bold my-20 mb-20 flex items-center text-5xl md:text-6xl'>
-  <span className='pb-8 uppercase  text-center rounded-md border-yellow-500'> <span className='header '>A <span className='text-yellow-500'>Solution</span> for <br/> Every Need</span> </span> 
- 
- </h2>
+<div className='text-white pt-10 h-full flex-col font-bold my-20 mb-20 flex items-center text-5xl md:text-6xl'>
+  <h1 className='pb-8 uppercase hero-text text-center rounded-md border-yellow-500'> 
+  A <span className='text-yellow-500'>Solution</span> for </h1>  
+  <h1 className='hero-text uppercase md:-mt-5'>  Every Need </h1> 
+  <hr className='w-28 border-2 mt-10 hero-text border-yellow-500' />
+ </div>
   
-<hr className='w-28 border-2  border-yellow-500' />
+
   
 </div>
 

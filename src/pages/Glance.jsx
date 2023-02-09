@@ -1,10 +1,10 @@
-import React from "react";
+import React,{useEffect} from "react";
 import media from "../assets/images/media.jpg";
 import weare from "../assets/images/t.jpg";
 import slide2 from "../assets/images/slide2.jpg";
 import slide3 from "../assets/images/slide3.jpg";
 import slide4 from "../assets/images/slide4.jpg";
-
+import {gsap,ScrollTrigger} from "gsap/all"
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -15,9 +15,38 @@ import "swiper/css/navigation";
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
 
+
+
 export default function Glance() {
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+  
+    
+    gsap.fromTo(
+      '.span',
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: .2,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: '#glance',
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: true,
+          
+        }
+      }
+    );
+  }, []);
+  
+
   return (
-    <div className=" max-h-fit relative min-h-fit flex">
+    <div 
+    id="glance"
+    className=" effectwrapper max-h-fit relative min-h-fit flex">
       <div className="bg-[#27082A] w-0 transparent border-yellow-500 md:w-2/5 text-center rounded-r-2xl h-[560px]">
         <p className="font-medium hidden md:flex font-Montserrat px-10 text-right font-Montserrat text-yellow-500 py-12">
           Transforming challenges into opportunities.
@@ -25,10 +54,11 @@ export default function Glance() {
       </div>
       <div className=" md:w-full  ">
         <p className=" max-w-2xl font-medium px-5 font-Montserrat text-sm pt-10 md:ml-32 tracking-wider pb-5      md:leading-relaxed ">
-          TWC provides a wide range of coaching, training, business advisory and
-          media services. The services are unique in the sense that they are all
-          practical based and provided by a team which is vested with the right
-          experience and competence
+         
+         <span className="span">   TWC provides a wide range of coaching, training, business advisory and</span>
+         <span className="span"> media services. The services are unique in the sense that they are all </span> 
+         <span className="span">practical based and provided by a team which is vested with the right </span>   
+         <span className="span"> experience and competence</span>   
         </p>
         <hr className="w-1/2 md:hidden m-auto bg-yellow-500 h-1  " />
       </div>

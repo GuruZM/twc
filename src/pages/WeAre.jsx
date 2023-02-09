@@ -47,8 +47,8 @@ export default function WeAre() {
  
 
         <div className='w-full flex flex-col items-center'>
-           <Fade delay={100} duration={1000}> <h2 className='pt-10 about text-4xl text-[#27082A]  font-Montserrat font-bold'>ABOUT <span className='text-yellow-500'>US</span></h2></Fade>
-           <Fade delay={200} duration={1000} direction="up"> <p className='text-center font-medium text-[#27082A] max-w-3xl text-sm tracking-wider leading-relaxed pb-5 pt-10'>
+          <h2 className='pt-10 about text-4xl text-[#27082A]  font-Montserrat font-bold'>ABOUT <span className='text-yellow-500'>US</span></h2> 
+          <p className='text-center font-medium text-[#27082A] max-w-3xl text-sm tracking-wider leading-relaxed pb-5 pt-10'>
             We conduct both group and individual trainings/coaching as well as
 business advisory services on our focus areas and issue training
 certificates under John Maxwell certification on some subjects. Through
@@ -56,18 +56,18 @@ our training/coaching services, we ensure that the client is competent
 at the end of the training. We work closely with clients to establish their
 training needs, develop tailor made products as well as advise on follow
 up and implementation in the workplace.
-            </p></Fade>
+            </p>
 
-            <Fade delay={300} duration={1000} direction="up">  <p className='text-center font-medium text-[#27082A]  py-5 border-yellow-500 max-w-xl   text-sm tracking-wider leading-relaxed  mb-10  pt-5'>
+   <p className='text-center font-medium text-[#27082A]  py-5 border-yellow-500 max-w-xl   text-sm tracking-wider leading-relaxed  mb-10  pt-5'>
             Ensuring and measuring the effectiveness of training is key to our
 approach, hence we provide evaluation services. Where a business does
 not have full time personnel to conduct certain duties within our focus
 areas, we offer a service to manage the program/activity on agreed
 terms and conditions.
-            </p></Fade>
+            </p>
 
  <a href="" className='py-3 px-12 border-2 rounded-full bg-yellow-500 text-sm font-bold text-[#27082A] border-yellow-500 mb-16'>
- <Fade delay={300} duration={1000} direction="up">   Learn More</Fade>
+   Learn More 
 </a>
 
             {/* <div className=''>

@@ -11,7 +11,7 @@ import integrity from "../assets/icons/integrity.png"
 import coaching from "../assets/illustration/coaching.png"
 import media from "../assets/illustration/media.png"
 import business from "../assets/illustration/business.png"
-
+import {   ScrollTrigger } from 'gsap/all';
 import "swiper/css";
 import "swiper/css/effect-cards";
 
@@ -20,23 +20,38 @@ import { EffectCards } from "swiper";
 
 export default function Hero() {
 
- useEffect(()=>{
-  let tl4=gsap.timeline();
-  tl4.fromTo(
-    ".header",2,
-    { y: -100, opacity: 0 },
-    { duration: 1, 
-      stagger:1,
-      y: 0, opacity: 1, ease: "power2.inOut" }
-  )
-//  tl4.from(".hero", {duration: 1, width: 0, to: {width: window.innerWidth}});
+ useEffect(() => {
+  gsap.fromTo(
+    '.hero-text',
+    1,
+    { opacity: 0, y: 100 },
+    { opacity: 1, y: 0, duration: 3, stagger: 0.2 }
+  );
 
- })
+  gsap.registerPlugin(ScrollTrigger);
+
+    gsap.fromTo(
+      '.box',
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: '.boxwrpper',
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: true
+        }
+      }
+    );
+}, []);
 
   return (
     <div 
     id="home"
-    className='min-h-max max-h-fit relative'>
+    className='min-h-max max-h-fit boxwrpper relative'>
     
     <div  
     style={{ backgroundImage: `url(${bg})`,
@@ -44,15 +59,16 @@ export default function Hero() {
     backgroundSize: "cover",
     
     }}
-    className="h-3/4 w-full hero"
+    className="h-3/4 w-full hero "
     >
 <div className='bg-[#27082A] h-full w-full opacity-80 pt-20 '>
 <div className=' w-4/5    py-28 m-auto h-full flex flex-col md:flex-row justify-around '>
  
-<h2 className='text-white h-full font-bold my-20 mb-20 flex flex-col items-center md:items-start  text-center md:text-left text-4xl md:text-6xl'>
-  <span className='pb-10  uppercase rounded-md border-yellow-500'> <span className='header '>A <span className='text-yellow-500'>Hub</span> of <br/> Transformation</span> </span> 
+<div className='text-white h-full font-bold my-20 mb-20 flex flex-col items-center md:items-start  text-center md:text-left text-4xl md:text-6xl'>
+  <h1 className='  hero-text uppercase rounded-md  border-yellow-500'> A <span className='text-yellow-500'>Hub</span> of </h1><br />
+   <h1 className='hero-text  -mt-12 pb-10 uppercase'>Transformation</h1>   
  <hr className='w-24 border-2  border-yellow-500' />
- </h2>
+ </div>
   
 
  <div className='flex  flex-col w-full   pb-10 md:pb-0 -skew-x-3 justify-center'>
@@ -92,20 +108,20 @@ export default function Hero() {
 
     </div>
       <div className='py-20 space-x-2 md:space-x-10     flex justify-center h-1/5'>
-  <div className='text-center  shadow-sm shadow-[#27082A]  hover:scale-110 cursor-pointer transition ease-in-out duration-150 rounded-xl p-4 md:p-5'>
+  <div className='text-center box  shadow-sm shadow-[#27082A]  hover:scale-110 cursor-pointer transition ease-in-out duration-150 rounded-xl p-4 md:p-5'>
     {/* <img src={teamwork} alt="" width={150} /> */}
     <p className='text-sm font-medium'>Teamwork </p>
   </div>
-  <div className='text-center shadow-sm shadow-yellow-500 hover:scale-110 cursor-pointer transition ease-in-out duration-150 rounded-xl p-4 md:p-5'>
+  <div className='text-center box shadow-sm shadow-yellow-500 hover:scale-110 cursor-pointer transition ease-in-out duration-150 rounded-xl p-4 md:p-5'>
     {/* <img src={integrity} alt="" width={150} /> */}
     <p  className='text-sm font-medium'>Integrity </p>
   </div>
-  <div className='text-center shadow-sm shadow-[#27082A]  hover:scale-110 cursor-pointer transition ease-in-out duration-150 rounded-xl p-4 md:p-5'>
+  <div className='text-center box shadow-sm shadow-[#27082A]  hover:scale-110 cursor-pointer transition ease-in-out duration-150 rounded-xl p-4 md:p-5'>
     {/* <img src={teamwork} alt="" width={150} /> */}
     <p  className='text-sm font-medium'> Mastery </p>
   </div>
 
-  <div className='text-center shadow-sm rounded-xl hover:scale-110 cursor-pointer transition ease-in-out duration-150 shadow-yellow-500 p-4 md:p-5'>
+  <div className='text-center box shadow-sm rounded-xl hover:scale-110 cursor-pointer transition ease-in-out duration-150 shadow-yellow-500 p-4 md:p-5'>
     {/* <img src={teamwork} alt="" width={150} /> */}
     <p  className='text-sm font-medium'> Excellence </p>
   </div>

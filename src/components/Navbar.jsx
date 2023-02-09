@@ -12,97 +12,105 @@ export default function Navbar() {
   
   const [menuTogle, setMenuTogle] = useState(false)
   
-  useEffect(()=>{
-    let tl = gsap.timeline();
-    let tl2 = gsap.timeline();
-    tl2.fromTo(
-      ".logo",
+  // useEffect(()=>{
+  //   let tl = gsap.timeline();
+  //   let tl2 = gsap.timeline();
+  //   tl2.fromTo(
+  //     ".logo",
       
-      {
-        y:30,    
-        opacity:0,
-        duration:2,
-        ease:"power2.inOut",
-      },
-      {
-        y:0,
-        opacity:1,
-        ease:"power2.inOut"
-      }
-    )
+  //     {
+  //       y:30,    
+  //       opacity:0,
+  //       duration:2,
+  //       ease:"power2.inOut",
+  //     },
+  //     {
+  //       y:0,
+  //       opacity:1,
+  //       ease:"power2.inOut"
+  //     }
+  //   )
 
-    tl.fromTo(
-      ".link1",
-      1.2,
-      {
-        y:30,    
-        opacity:0,
-        duration:2,
-        ease:"power2.inOut",
-      },
-      {
-        y:0,
-        opacity:1,
-        ease:"power2.inOut"
-      }
-    ).fromTo(
-      ".link2",
-      1.2,
-      {
-        y:30,    
-        opacity:0,
-        duration:2,
-        ease:"power2.inOut",
-      },
-      {
-        y:0,
-        opacity:1,
-        ease:"power2.inOut"
-      }
-    ).fromTo(
-      ".link3",
-      1.2,
-      {
-        y:30,    
-        opacity:0,
-        duration:2,
-        ease:"power2.inOut",
-      },
-      {
-        y:0,
-        opacity:1,
-        ease:"power2.inOut"
-      }
-    ).fromTo(
-      ".link4",
-      1.2,
-      {
-        y:30,    
-        opacity:0,
-        duration:2,
-        ease:"power2.inOut",
-      },
-      {
-        y:0,
-        opacity:1,
-        ease:"power2.inOut"
-      }
-    ).fromTo(
-      ".link5",
-      1.2,
-      {
-        y:30,    
-        opacity:0,
-        duration:2,
-        ease:"power2.inOut",
-      },
-      {
-        y:0,
-        opacity:1,
-        ease:"power2.inOut"
-      }
-    )
-  });
+  //   tl.fromTo(
+  //     ".link1",
+  //     1.2,
+  //     {
+  //       y:30,    
+  //       opacity:0,
+  //       duration:2,
+  //       ease:"power2.inOut",
+  //     },
+  //     {
+  //       y:0,
+  //       opacity:1,
+  //       ease:"power2.inOut"
+  //     }
+  //   ).fromTo(
+  //     ".link2",
+  //     1.2,
+  //     {
+  //       y:30,    
+  //       opacity:0,
+  //       duration:2,
+  //       ease:"power2.inOut",
+  //     },
+  //     {
+  //       y:0,
+  //       opacity:1,
+  //       ease:"power2.inOut"
+  //     }
+  //   ).fromTo(
+  //     ".link3",
+  //     1.2,
+  //     {
+  //       y:30,    
+  //       opacity:0,
+  //       duration:2,
+  //       ease:"power2.inOut",
+  //     },
+  //     {
+  //       y:0,
+  //       opacity:1,
+  //       ease:"power2.inOut"
+  //     }
+  //   ).fromTo(
+  //     ".link4",
+  //     1.2,
+  //     {
+  //       y:30,    
+  //       opacity:0,
+  //       duration:2,
+  //       ease:"power2.inOut",
+  //     },
+  //     {
+  //       y:0,
+  //       opacity:1,
+  //       ease:"power2.inOut"
+  //     }
+  //   ).fromTo(
+  //     ".link5",
+  //     1.2,
+  //     {
+  //       y:30,    
+  //       opacity:0,
+  //       duration:2,
+  //       ease:"power2.inOut",
+  //     },
+  //     {
+  //       y:0,
+  //       opacity:1,
+  //       ease:"power2.inOut"
+  //     }
+  //   )
+  // });
+
+  useEffect(() => {
+    gsap.fromTo(
+      '.nav-link',
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, duration: 1, stagger: 0.2 }
+    );
+  }, [menuTogle]);
 
   const toggleMenu = ()=>
   {
@@ -125,7 +133,7 @@ export default function Navbar() {
         <div className='hidden md:flex items-center pr-6 space-x-10 animate-vertical-spin'>
         <a 
              href="/"
-            className='link1 text-xs font-semibold text-[#27082A] cursor-pointer'>
+            className='nav-link text-xs font-semibold text-[#27082A] cursor-pointer'>
               HOME
               </a>
          
@@ -143,11 +151,11 @@ export default function Navbar() {
             smooth={true}
             offset={-70}
             duration={500}
-            className='link2 text-xs  s cursor-pointer text-[#27082A] font-semibold'>ABOUT</HashLink >
+            className='text-xs nav-link s cursor-pointer text-[#27082A] font-semibold'>ABOUT</HashLink >
             
             
             <a href="/services"
-            className='link3 text-xs cursor-pointer text-[#27082A] font-semibold'> SERVICES 
+            className='nav-link text-xs cursor-pointer text-[#27082A] font-semibold'> SERVICES 
             </a>
 
             {/* <a 
@@ -161,14 +169,14 @@ export default function Navbar() {
             smooth={true}
             offset={-70}
             duration={500}
-            className='link4 text-xs cursor-pointer    text-[#27082A] rounded-md font-semibold'>
+            className='nav-link text-xs cursor-pointer    text-[#27082A] rounded-md font-semibold'>
               CONTACT
               </HashLink>
 
               <a 
               target = "_blank"
              href={pdf}
-            className='link5 text-xs font-semibold  px-6 py-3 bg-yellow-500 rounded-md text-white cursor-pointer'>
+            className='nav-link text-xs font-semibold  px-6 py-3 bg-yellow-500 rounded-md text-white cursor-pointer'>
               PROFILE
               </a>
             {/* <a
@@ -191,18 +199,18 @@ export default function Navbar() {
       />
 
     <ul className=" md:hidden flex  text-white items-center justify-center space-y-10 flex-col ">
-    <li className='link1 text-3xl font-semibold'><a href="/" onClick={toggleMenu}>Home</a> </li>
-    <li className='link2 text-3xl font-semibold'><HashLink 
+    <li className='nav-link text-3xl font-semibold'><a href="/" onClick={toggleMenu}>Home</a> </li>
+    <li className='nav-link text-3xl font-semibold'><HashLink 
             to="/#about"
             spy={true}
             smooth={true}
             offset={-70}
             duration={500}
             onClick={toggleMenu}
-            className='link2   s cursor-pointer text-white  font-semibold'>About</HashLink > 
+            className='nav-link   s cursor-pointer text-white  font-semibold'>About</HashLink > 
              </li>
-    <li className='link3 text-3xl font-semibold'><a href="/services" >Services</a> </li>
-    <li className='link4  text-3xl font-semibold'> <HashLink 
+    <li className='nav-link text-3xl font-semibold'><a href="/services" >Services</a> </li>
+    <li className='nav-link  text-3xl font-semibold'> <HashLink 
             to="/#contact"
             spy={true}
             smooth={true}
@@ -213,7 +221,7 @@ export default function Navbar() {
               Contact
               </HashLink></li>
 
-              <li className='link5 text-3xl'>
+              <li className='nav-link text-3xl'>
               <a 
              href="/#about"
             className='  font-semibold  px-6 py-3 border-2 border-yellow-500 rounded-full text-white cursor-pointer'>

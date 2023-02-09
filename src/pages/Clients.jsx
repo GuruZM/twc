@@ -121,13 +121,13 @@ export default function Clients() {
             </SwiperSlide>
           </Swiper>
         </div>
-        <Fade delay={100} duration={2000} direction="up">    <p className="py-16 text-sm font-Montserrat max-w-3xl font-medium">
+         <p className="py-16 text-sm font-Montserrat max-w-3xl font-medium">
           We pride ourselves in quality services delivery, for any type of
           client. We have had the privilege to provide coaching, training and
           business development services to WHO. Our team of experts have worked
           closely with WHO to support their mission of ensuring the highest
           possible level of health for all people. 
-        </p></Fade>
+        </p>
       </div>
     </div>
   );
