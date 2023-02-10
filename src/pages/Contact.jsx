@@ -1,6 +1,31 @@
-import React from 'react'
+import React,{useEffect, useState} from 'react'
 import bg from "../assets/images/contact.jpg"
+import axios from "axios";
+
 export default function Contact() {
+
+  const [countries, setCountries] = useState([]);
+  const [activeOption, setActiveOption] = useState();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios(
+        "https://restcountries.com/v2/all"
+      );
+      // console.log(result.data.alpha2Code)
+      setCountries(result.data);
+    };
+
+    fetchData();
+  }, []);
+
+  const handleChange = (e) => {
+    // let lastFour = e.target.value.substring(e.target.value.length - 4)
+    // console.log(lastFour)
+    setActiveOption(e.target.value);
+  };
+ 
+
   return (
     <div 
     style={{ backgroundImage: `url(${bg})`,
@@ -20,8 +45,10 @@ export default function Contact() {
           <h2 className='text-yellow-500 font-Montserrat font-bold text-4xl'>
             GET IN <span className='text-white font-Montserrat font-bold'>TOUCH</span> 
             </h2> 
+            {/* jjejje
+      <img src="https://flagcdn.com/bd.svg" sizes='20px' alt="" /> */}
             <p className='text-white font-Montserrat   font-medium  py-10'>
-              let us know what you think! fill in the form on your...
+            Schedule for an appointment...
             </p>
         </div>
 <form className='w-full'>
@@ -46,9 +73,35 @@ export default function Contact() {
  
   
   <div class="grid md:grid-cols-2 md:gap-6">
-    <div class="relative z-0 w-full mb-6 group">
+    <div class="relative space-x-2 flex z-0 w-full mb-6 group">
+    
+    <select className={` w-5/12 md:w-4/6 py-2.5 px-0 text-center bg-[#27082A] p-2 text-white   text-sm `}
+    
+    onChange={handleChange}
+     value={activeOption}
+  
+    >
+   
+   {countries.map((country) => (
+        <option
+          className={`flex text-left ${
+            country.callingCodes && country.callingCodes[0] === activeOption
+              ? "text-red-400"
+              : "text-white"
+          }`}
+          key={country.alpha2Code && country.alpha2Code ? country.alpha2Code : country.name}
+          value={country.callingCodes[0] && country.callingCodes[0] ? country.callingCodes[0] : ""}
+          // value={country.alpha2Code}
+        >
+          <img src={country.flag} width={100} alt={`Flag of ${country.name}`} />
+          {country.name}
+          {/* {country.flag} */}
+          {country.callingCodes && country.callingCodes[0] ? ` +${country.callingCodes[0]}` : ""}
+        </option>
+      ))}
+    </select>
         <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_phone" id="floating_phone" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-        <label for="floating_phone" class="peer-focus:font-medium absolute text-sm text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone number (+260) 955-997-830</label>
+        {/* <label for="floating_phone" class="peer-focus:font-medium absolute text-sm text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone number (+260) 955-997-830</label> */}
     </div>
     <div class="relative z-0 w-full mb-6 group">
         <input type="text" name="floating_company" id="floating_company" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
