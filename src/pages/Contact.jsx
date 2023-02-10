@@ -6,14 +6,16 @@ export default function Contact() {
 
   const [countries, setCountries] = useState([]);
   const [activeOption, setActiveOption] = useState();
+  const [flag, setFlag] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(
         "https://restcountries.com/v2/all"
       );
-      // console.log(result.data.alpha2Code)
+       console.log(result.data.alpha2Code)
       setCountries(result.data);
+     
     };
 
     fetchData();
@@ -22,7 +24,9 @@ export default function Contact() {
   const handleChange = (e) => {
     // let lastFour = e.target.value.substring(e.target.value.length - 4)
     // console.log(lastFour)
+
     setActiveOption(e.target.value);
+    //  console.log(e.target)
   };
  
 
@@ -70,18 +74,15 @@ export default function Contact() {
       <input type="text" name="floating_password" id="floating_password" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
       <label for="floating_password" class="peer-focus:font-medium absolute text-sm text-white   duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Message</label>
   </div>
- 
-  
-  <div class="grid md:grid-cols-2 md:gap-6">
-    <div class="relative space-x-2 flex z-0 w-full mb-6 group">
+  <div class="relative z-10 w-full mb-6   group">
     
-    <select className={` w-5/12 md:w-4/6 py-2.5 px-0 text-center bg-[#27082A] p-2 text-white   text-sm `}
+  <select className={` w-full   py-2.5 px-0 text-center bg-[#27082A] p-2 text-white   text-sm `}
     
     onChange={handleChange}
      value={activeOption}
   
     >
-   
+   <option value="">--country/Region--</option>
    {countries.map((country) => (
         <option
           className={`flex text-left ${
@@ -93,15 +94,32 @@ export default function Contact() {
           value={country.callingCodes[0] && country.callingCodes[0] ? country.callingCodes[0] : ""}
           // value={country.alpha2Code}
         >
-          <img src={country.flag} width={100} alt={`Flag of ${country.name}`} />
-          {country.name}
+          {/* <img src="https://flagcdn.com/bd.svg" width={100} alt={`Flag of ${country.name}`} /> */}
+          {country.name }
           {/* {country.flag} */}
-          {country.callingCodes && country.callingCodes[0] ? ` +${country.callingCodes[0]}` : ""}
+          {" "}
+         ( {country.callingCodes && country.callingCodes[0] ? ` +${country.callingCodes[0]}` : ""} )
         </option>
       ))}
     </select>
-        <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_phone" id="floating_phone" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-        {/* <label for="floating_phone" class="peer-focus:font-medium absolute text-sm text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone number (+260) 955-997-830</label> */}
+    
+  </div>
+  <div class="relative z-10 w-full mb-6 group">
+  <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_phone" id="floating_phone" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+      <label for="floating_password" class="peer-focus:font-medium absolute text-sm text-white   duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone</label>
+  </div>
+  
+  <div class="grid   md:gap-6">
+
+    <div class="relative  z-0 w-full  group">
+    
+   {/* <div className='w-5/12 md:w-4/6 py-2.5 px-0 text-center bg-[#27082A] p-2 text-white   text-sm '>
+         
+          <img src="https://flagcdn.com/bd.svg" width={100}  />
+
+   </div> */}
+        {/* <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_phone" id="floating_phone" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required /> */}
+        
     </div>
     <div class="relative z-0 w-full mb-6 group">
         <input type="text" name="floating_company" id="floating_company" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />

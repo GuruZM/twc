@@ -44,7 +44,7 @@ CONSULTANCY</p>  */}
   <div className='   flex   border-yellow-500 md:flex-row  justify-evenly items-center py-5 space-x-10 md:space-y-0  md:space-x-5  '>
 
      
-      <span> <FaFacebookF className='opacity-70   hover:scale-110 cursor-pointer   transition ease-in-out duration-150 text-white' size={20}/></span> 
+      <a target="_blank" href="https://www.facebook.com/profile.php?id=100076322231129"> <FaFacebookF className='opacity-70   hover:scale-110 cursor-pointer   transition ease-in-out duration-150 text-white' size={20}/></a> 
      <span> <RiInstagramLine className='text-white z-10 opacity-70 hover:scale-110 cursor-pointer transition ease-in-out duration-150' size={20}/></span> 
       <span> <FaTwitter className='text-white opacity-70  hover:scale-110 cursor-pointer transition ease-in-out duration-150' size={20}/></span> 
    
