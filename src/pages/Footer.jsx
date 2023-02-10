@@ -14,9 +14,9 @@ export default function Footer() {
     }}
   
     className=' h-72 relative    '>
-      <h2 className='text-black absolute m-right m-left-0  m-auto z-40'>@guru_zm</h2>
+      {/* <h2 className='text-black absolute m-right m-left-0  m-auto z-40'>@guru_zm</h2> */}
       <div className='absolute h-full w-full  bg-[#27082A] opacity-95 '></div> 
-   <h2 className='text-white absolute left-0 bottom-2 text-2xl font-bold opacity-20  right-0 mx-auto text-center z-40'>@guru_zm</h2>
+   <h2 className='text-white absolute left-0 bottom-2 text-2xl font-bold opacity-10  right-0 mx-auto text-center z-40'>@guru_zm</h2>
     {/* <div className='h-28 bg-white absolute -top-10 left-0 right-0 m-auto  w-4/5 shadow-2xl'>
 
     </div> */}
