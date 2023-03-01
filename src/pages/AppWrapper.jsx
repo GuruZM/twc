@@ -5,6 +5,7 @@ import Services from "./Services";
 import About from "./WeAre"
 import { BrowserRouter,Routes } from 'react-router-dom';
 import Surge from './Surge';
+import Clients from './Clients';
 
 export default function AppWrapper() {
   return (
@@ -17,6 +18,7 @@ export default function AppWrapper() {
                 <Route path="/services"  element={<Services/>} />
                 <Route path="/about"  element={<Home/>} />
                 <Route path="/contact"  element={<Home/>} />
+                <Route path="/clients"  element={<Clients/>} />
                 <Route path="surge" element={<Surge/>}/>
           </Routes> 
            </BrowserRouter>

@@ -13,7 +13,7 @@ import { Pagination } from "swiper";
 import { Fade } from "react-awesome-reveal";
 export default function Clients() {
   return (
-    <div className="shadow-md">
+    <div id="clients" className="shadow-md">
       <div className="  max-h-fit py-8 pb-16 pt-8   w-4/5 m-auto">
       <Fade delay={100} duration={1500} direction="left"> <h2 className="py-20 text-4xl text-[#27082A]  font-Montserrat font-bold">
           PLEASURE TO <span className="text-yellow-500">WORK</span> WITH!

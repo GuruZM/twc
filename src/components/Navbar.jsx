@@ -8,101 +8,64 @@ import { HashLink } from 'react-router-hash-link';
 
 import { Link, animateScroll as scroll } from "react-scroll";
  import { Link as RouterLink } from 'react-router-dom';
+
+
+
+ const SubMenu = (props) => {
+  return (
+    <div 
+    onMouseLeave={props.mousel}
+    className="absolute  bg-white top-20 w-60 py-2 shadow-lg rounded-lg">
+      <HashLink
+        to="/#team"
+        className="block uppercase px-4 py-2 text-xs font-semibold text-[#27082A] hover:bg-[#27082A] hover:text-white"
+      >
+        Who we are 
+      </HashLink>
+      <HashLink
+        to="/#testimonials"
+        className="block px-4  uppercase  py-2 text-xs font-semibold text-[#27082A] hover:bg-[#27082A] hover:text-white"
+      >
+        Mission, vision, values
+      </HashLink>
+      <HashLink
+        to="/#testimonials"
+        className="block px-4 uppercase py-2 text-xs font-semibold text-[#27082A] hover:bg-[#27082A] hover:text-white"
+      >
+        The Board
+      </HashLink>
+      <HashLink
+        to="/#testimonials"
+        className="block px-4 uppercase py-2 text-xs font-semibold text-[#27082A] hover:bg-[#27082A] hover:text-white"
+      >
+         The management Team
+      </HashLink>
+      <HashLink
+        to="/#testimonials"
+        className="block px-4 uppercase py-2 text-xs font-semibold text-[#27082A] hover:bg-[#27082A] hover:text-white"
+      >
+       Supporting Staff
+      </HashLink>
+      <HashLink
+        to="/#testimonials"
+        className="block px-4 uppercase py-2 text-xs font-semibold text-[#27082A] hover:bg-[#27082A] hover:text-white"
+      >
+        Associate Team members
+      </HashLink>
+      <HashLink
+        to="/#clients"
+        className="block px-4 uppercase text-xs font-semibold text-[#27082A] py-2  hover:bg-[#27082A] hover:text-white"
+      >
+        Our Clients
+      </HashLink>
+    </div>
+  );
+};
+
+
 export default function Navbar() {
   
   const [menuTogle, setMenuTogle] = useState(false)
-  
-  // useEffect(()=>{
-  //   let tl = gsap.timeline();
-  //   let tl2 = gsap.timeline();
-  //   tl2.fromTo(
-  //     ".logo",
-      
-  //     {
-  //       y:30,    
-  //       opacity:0,
-  //       duration:2,
-  //       ease:"power2.inOut",
-  //     },
-  //     {
-  //       y:0,
-  //       opacity:1,
-  //       ease:"power2.inOut"
-  //     }
-  //   )
-
-  //   tl.fromTo(
-  //     ".link1",
-  //     1.2,
-  //     {
-  //       y:30,    
-  //       opacity:0,
-  //       duration:2,
-  //       ease:"power2.inOut",
-  //     },
-  //     {
-  //       y:0,
-  //       opacity:1,
-  //       ease:"power2.inOut"
-  //     }
-  //   ).fromTo(
-  //     ".link2",
-  //     1.2,
-  //     {
-  //       y:30,    
-  //       opacity:0,
-  //       duration:2,
-  //       ease:"power2.inOut",
-  //     },
-  //     {
-  //       y:0,
-  //       opacity:1,
-  //       ease:"power2.inOut"
-  //     }
-  //   ).fromTo(
-  //     ".link3",
-  //     1.2,
-  //     {
-  //       y:30,    
-  //       opacity:0,
-  //       duration:2,
-  //       ease:"power2.inOut",
-  //     },
-  //     {
-  //       y:0,
-  //       opacity:1,
-  //       ease:"power2.inOut"
-  //     }
-  //   ).fromTo(
-  //     ".link4",
-  //     1.2,
-  //     {
-  //       y:30,    
-  //       opacity:0,
-  //       duration:2,
-  //       ease:"power2.inOut",
-  //     },
-  //     {
-  //       y:0,
-  //       opacity:1,
-  //       ease:"power2.inOut"
-  //     }
-  //   ).fromTo(
-  //     ".link5",
-  //     1.2,
-  //     {
-  //       y:30,    
-  //       opacity:0,
-  //       duration:2,
-  //       ease:"power2.inOut",
-  //     },
-  //     {
-  //       y:0,
-  //       opacity:1,
-  //       ease:"power2.inOut"
-  //     }
-  //   )
-  // });
 
   useEffect(() => {
     gsap.fromTo(
@@ -117,6 +80,15 @@ export default function Navbar() {
     setMenuTogle(menuTogle=>!menuTogle)
   }
  
+  const [showSubMenu, setShowSubMenu] = useState(false);
+
+  const handleMouseEnter = () => {
+    setShowSubMenu(true);
+  };
+
+  const handleMouseLeave = () => {
+    setShowSubMenu(false);
+  };
   return (
     <>
    <div className='shadow-lg z-40 fixed  bg-white w-full items-center     border-yellow-500'>
@@ -145,15 +117,23 @@ export default function Navbar() {
               </a> */}
 
 
-            <HashLink 
+            {/* <HashLink 
             to="/#about"
             spy={true}
             smooth={true}
             offset={-70}
             duration={500}
-            className='text-xs nav-link s cursor-pointer text-[#27082A] font-semibold'>ABOUT</HashLink >
+            className='text-xs nav-link s cursor-pointer text-[#27082A] font-semibold'>ABOUT</HashLink > */}
             
-            
+             <HashLink
+            onMouseEnter={handleMouseEnter}
+            // onMouseLeave={handleMouseLeave}
+            to="/#about"
+            className="text-xs nav-link s cursor-pointer uppercase text-[#27082A] font-semibold"
+          >
+            About
+          </HashLink>
+          {showSubMenu && <SubMenu mousel={handleMouseLeave} />}
             <a href="/services"
             className='nav-link text-xs cursor-pointer text-[#27082A] font-semibold'> SERVICES 
             </a>
