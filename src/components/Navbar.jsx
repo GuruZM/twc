@@ -17,42 +17,49 @@ import { Link, animateScroll as scroll } from "react-scroll";
     onMouseLeave={props.mousel}
     className="absolute  bg-white top-20 w-60 py-2 shadow-lg rounded-lg">
       <HashLink
+      onClick={props.mousel}
         to="/#team"
         className="block uppercase px-4 py-2 text-xs font-semibold text-[#27082A] hover:bg-[#27082A] hover:text-white"
       >
         Who we are 
       </HashLink>
       <HashLink
+      onClick={props.mousel}
         to="/#testimonials"
         className="block px-4  uppercase  py-2 text-xs font-semibold text-[#27082A] hover:bg-[#27082A] hover:text-white"
       >
         Mission, vision, values
       </HashLink>
       <HashLink
+      onClick={props.mousel}
         to="/#testimonials"
         className="block px-4 uppercase py-2 text-xs font-semibold text-[#27082A] hover:bg-[#27082A] hover:text-white"
       >
         The Board
       </HashLink>
       <HashLink
+      onClick={props.mousel}
         to="/#testimonials"
         className="block px-4 uppercase py-2 text-xs font-semibold text-[#27082A] hover:bg-[#27082A] hover:text-white"
       >
          The management Team
       </HashLink>
       <HashLink
+      onClick={props.mousel}
         to="/#testimonials"
         className="block px-4 uppercase py-2 text-xs font-semibold text-[#27082A] hover:bg-[#27082A] hover:text-white"
       >
        Supporting Staff
       </HashLink>
       <HashLink
+      onClick={props.mousel}
         to="/#testimonials"
         className="block px-4 uppercase py-2 text-xs font-semibold text-[#27082A] hover:bg-[#27082A] hover:text-white"
       >
         Associate Team members
       </HashLink>
       <HashLink
+      onClick={props.mousel}
         to="/#clients"
         className="block px-4 uppercase text-xs font-semibold text-[#27082A] py-2  hover:bg-[#27082A] hover:text-white"
       >
